@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join MAXROPREPS | Football Recruiting</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav id="global-navbar"></nav>
+
+    <div class="auth-container" style="max-width: 500px; margin: 40px auto;">
+        <div class="auth-card" style="padding: 40px 30px; text-align: center;">
+            <h1 class="auth-title" style="font-size: 32px; font-weight: 800; margin-bottom: 5px;">JOIN MAXROPREPS</h1>
+            <p class="auth-subtitle" style="margin-bottom: 25px;">Create your football recruiting profile</p>
+            
+            <form onsubmit="handleSignup(event)" style="text-align: left;">
+                
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" id="username" placeholder="Pick a unique username" required>
+                    <div class="input-subtext">Permanent — can't be changed later.</div>
+                </div>
+
+                <div class="form-group">
+                    <label>Roblox Username</label>
+                    <input type="text" id="robloxUsername" placeholder="Your Roblox username" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Discord Username</label>
+                    <input type="text" id="discordUsername" placeholder="username#1234" required>
+                </div>
+
+                <div class="form-group">
+                    <label style="margin-bottom: 2px;">Positions</label>
+                    <div class="input-subtext" style="margin-bottom: 12px;">Pick all that apply — e.g. one offense + one defense.</div>
+                    
+                    <div style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; font-weight: bold;">Offense</div>
+                    <div class="position-selector-grid" style="grid-template-columns: repeat(5, 1fr); gap: 6px; margin-bottom: 14px;">
+                        <div class="pos-btn" onclick="togglePositionSelection(this)" data-value="QB">QB</div>
+                        <div class="pos-btn" onclick="togglePositionSelection(this)" data-value="WR">WR</div>
+                        <div class="pos-btn" onclick="togglePositionSelection(this)" data-value="OL">OL</div>
+                        <div class="pos-btn" onclick="togglePositionSelection(this)" data-value="RB">RB</div>
+                        <div class="pos-btn" onclick="togglePositionSelection(this)" data-value="TE">TE</div>
+                    </div>
+                    
+                    <div style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; font-weight: bold;">Defense</div>
+                    <div class="position-selector-grid" style="grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 14px;">
+                        <div class="pos-btn" onclick="togglePositionSelection(this)" data-value="DL">DL</div>
+                        <div class="pos-btn" onclick="togglePositionSelection(this)" data-value="DB">DB</div>
+                        <div class="pos-btn" onclick="togglePositionSelection(this)" data-value="FS">FS</div>
+                        <div class="pos-btn" onclick="togglePositionSelection(this)" data-value="LB">LB</div>
+                    </div>
+                    
+                    <div style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; font-weight: bold;">Special Teams</div>
+                    <div class="position-selector-grid" style="grid-template-columns: repeat(2, 1fr); gap: 6px; max-width: 180px;">
+                        <div class="pos-btn" onclick="togglePositionSelection(this)" data-value="K">K</div>
+                        <div class="pos-btn" onclick="togglePositionSelection(this)" data-value="P">P</div>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 20px;">
+                    <label>Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="auth-btn" style="background: linear-gradient(135deg, #3b82f6, #4f46e5); color: white; border-radius: 8px; font-weight: bold; font-size: 15px; margin-top: 15px; padding: 14px;">
+                    Create Account
+                </button>
+            </form>
+            
+            <p style="font-size: 13px; color: var(--text-muted); margin-top: 20px; margin-bottom: 0;">
+                Already have an account? <a href="login.html" style="color: #3b82f6; text-decoration: none; font-weight: bold;">Sign In</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
